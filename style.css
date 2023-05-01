@@ -13,7 +13,7 @@ h1 {
 .title {
   display: block;
   font-size: 30px;
-  color: rgba(101, 134, 177, 0.8);
+  color: #808080;
   align-self: center;
   margin-block-start: 10px;
   margin-block-end: 10px;
@@ -41,7 +41,7 @@ background-color:#808080;
   color: #fff;
   display: flex;
   background-color: #444;
-  border-radius: 5px;
+  border-radius: 7px;
   min-height: 40px;
   min-width: 30px;
   align-items: center;
@@ -49,6 +49,18 @@ background-color:#808080;
   padding-left: 7px;
   padding-right: 7px;
   flex-grow: 1;
+}
+
+.button:hover {
+  background-color: seagreen;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.button:active {
+  background-color:forestgreen;
+  border-radius: 25px;
+  transition: all .3s;
 }
 
 .big-button {
