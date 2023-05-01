@@ -38,5 +38,7 @@ function addElement() {
 };
 
  buttons.forEach(n => n.addEventListener('click', () => {
-  document.querySelector(".textarea").innerHTML = buttons.textArea;
+   textArea.value = n.innerHTML;
  }))
+ 
+ 
