@@ -1,11 +1,11 @@
-{
-"extend": "airbnb-base",
-"env": {
-  "browser": true,
-},
-"rules": {
-     "linebreak-style": 0,
-     "global-require": 0,
-    "eslint linebreak-style": [0, "error", "windows"],
+  {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    }
   }
-}
