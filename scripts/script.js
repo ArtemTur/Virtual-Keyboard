@@ -60,7 +60,7 @@ function liveKeyboard() {
     } else if (e.key === "ArrowUp") {
       textArea.setSelectionRange(0, 0);
     } else if (e.key === "CapsLock") {
-       li.includes("CapsLock").classList.add("active");
+      textArea.value += "";
     } else {
       textArea.value += e.key;
     }
@@ -68,3 +68,38 @@ function liveKeyboard() {
 };
 
 liveKeyboard();
+
+function locKeyboard() {
+  document.addEventListener("click", (e) => {
+    if (e.target.textContent === "Enter") {
+      textArea.value += "\n";
+    } else if (e.target.textContent === "Shift") {
+      textArea.value += "";
+    } else if (e.target.textContent === "Tab") {
+      textArea.value += "   ";
+    } else if (e.target.textContent === "") {
+      textArea.value += " ";
+    } else if (e.target.textContent === "Backspace") {
+      textArea.value = textArea.value.slice(0, -1);
+    } else if (e.target.textContent === "Tab") {
+      textArea.value += "   ";
+    } else if (e.target.textContent === "&#9658;") {
+      const cursorPosition = textArea.selectionStart;
+      textArea.setSelectionRange(cursorPosition + 1, cursorPosition + 0);
+    } else if (e.target.textContent === "&#9668;") {
+      const cursorPosition = textArea.selectionStart;
+      textArea.setSelectionRange(cursorPosition - 1, cursorPosition - 0);
+    } else if (e.target.textContent === "&#9660;") {
+      textArea.setSelectionRange(textArea.value.length, textArea.value.length);
+    } else if (e.target.textContent === "&#9650;") {
+      textArea.setSelectionRange(0, 0);
+    } else if (e.target.textContent === "CapsLock") {
+      textArea.value += "";
+    } else {
+      textArea.value += e.target.textContent;
+    }
+  });
+};
+
+locKeyboard();
+
