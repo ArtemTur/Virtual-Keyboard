@@ -37,8 +37,12 @@ function addElement() {
   };
 };
 
- buttons.forEach(n => n.addEventListener('click', () => {
-   textArea.value = n.innerHTML;
- }))
+  
+document.querySelectorAll("li").forEach(li => {li.addEventListener('click', () => {
+   
+    document.querySelector(".textarea").value += li.textContent;
+ })})
+
+ 
  
  
